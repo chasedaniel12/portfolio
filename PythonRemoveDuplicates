@@ -1,0 +1,18 @@
+#The goal is to remove duplicates from the dataset and output a new list.
+#Define the list 
+dupl_list = [10, 20, 30, 20, 10, 50, 90, 60, 40, 80, 50, 40, 100, 80]
+dupl_list.sort()
+
+#Creates an empty set to store duplicate numbers and a new list
+dupl_nums = set()
+new_list = []
+
+#Iterates through each element in the list
+for x in dupl_list:
+    #duplicate check
+    if x not in dupl_nums:
+        new_list.append(x)
+        dupl_nums.add(x)
+
+#Print the new list
+print(new_list)
